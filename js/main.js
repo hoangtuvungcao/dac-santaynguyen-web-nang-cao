@@ -34,6 +34,7 @@ function renderProducts(items) {
 
   productList.innerHTML = items.map(product => `
     <article class="product-card">
+      <img src="${product.image}" alt="${product.name}" class="product-image" />
       <div>
         <h3>${product.name}</h3>
         <p>${product.description}</p>

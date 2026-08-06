@@ -6,7 +6,7 @@
     "price": "120.000₫ / 500g",
     "origin": "Đắk Nông",
     "description": "Hạt cà phê Robusta rang vừa, hương thơm đất đỏ bazan đặc trưng.",
-    "image": "assets/images/ca-phe-robusta.jpg"
+    "image": "assets/images/lauracf.png"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "price": "180.000₫ / 500g",
     "origin": "Kon Tum",
     "description": "Mật ong hoa rừng tự nhiên, vị ngọt thanh, không pha đường.",
-    "image": "assets/images/mat-ong-rung.jpg"
+    "image": "assets/images/matong.png"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "price": "95.000₫ / 100g",
     "origin": "Đắk Lắk",
     "description": "Tiêu đen hạt căng bóng, thơm nồng, phù hợp nấu ăn hàng ngày.",
-    "image": "assets/images/tieu-den.jpg"
+    "image": "assets/images/tieudengialai.png"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "price": "85.000₫ / 200g",
     "origin": "Lâm Đồng",
     "description": "Măng khô được sơ chế sạch, giữ nguyên vị ngọt đặc trưng của măng rừng.",
-    "image": "assets/images/mang-kho.jpg"
+    "image": "assets/images/manggiquenroi.png"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "price": "75.000₫ / trái",
     "origin": "Đắk Lắk",
     "description": "Bơ sáp mềm, béo ngậy, thơm mùi tự nhiên của Tây Nguyên.",
-    "image": "assets/images/bo-sap.jpg"
+    "image": "assets/images/bosap.png"
   },
   {
     "id": 6,
@@ -51,6 +51,6 @@
     "price": "120.000₫ / 100g",
     "origin": "Lâm Đồng",
     "description": "Hoa atiso sấy khô dùng pha trà thanh mát, hỗ trợ tiêu hóa.",
-    "image": "assets/images/atiso-kho.jpg"
+    "image": "assets/images/hoaatisosaykho.png"
   }
 ]
