@@ -1,4 +1,4 @@
-const productList = document.querySelector('#productList');
+﻿const productList = document.querySelector('#productList');
 const categorySelect = document.querySelector('#categorySelect');
 const searchInput = document.querySelector('#searchInput');
 let products = [];
