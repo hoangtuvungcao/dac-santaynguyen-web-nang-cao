@@ -1,0 +1,19 @@
+{
+  "name": "dac-san-tay-nguyen",
+  "version": "1.0.0",
+  "description": "Website quảng bá và giới thiệu nông sản đặc sản vùng đại ngàn Tây Nguyên",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -l 3000",
+    "dev": "npx serve -l 3000"
+  },
+  "keywords": [
+    "dac-san-tay-nguyen",
+    "web-application",
+    "html5",
+    "css3",
+    "javascript"
+  ],
+  "author": "Nhóm Phát Triển Web Tây Nguyên",
+  "license": "MIT"
+}
