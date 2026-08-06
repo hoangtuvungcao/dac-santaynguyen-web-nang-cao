@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ð?c S?n Tây Nguyên</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="#home" class="brand">Ð?c S?n Tây Nguyên</a>
+      <nav class="main-nav">
+        <a href="#home">Trang ch?</a>
+        <a href="#products">S?n ph?m</a>
+        <a href="#origin">Ngu?n g?c</a>
+        <a href="#contact">Liên h?</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Khám phá d?c s?n Tây Nguyên</h1>
+        <p>H?t café, m?t ong, mang r?ng, và s?n ph?m truy?n th?ng t? vùng d?t d? bazan.</p>
+      </div>
+    </section>
+
+    <section id="products" class="section section-products">
+      <div class="container">
+        <div class="section-header">
+          <h2>S?n ph?m tiêu bi?u</h2>
+          <div class="filters">
+            <label>
+              Tìm ki?m
+              <input id="searchInput" type="search" placeholder="Tìm tên s?n ph?m..." />
+            </label>
+            <label>
+              Danh m?c
+              <select id="categorySelect">
+                <option value="all">T?t c?</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div id="productList" class="product-grid"></div>
+      </div>
+    </section>
+
+    <section id="origin" class="section section-origin">
+      <div class="container">
+        <h2>Gi?i thi?u ngu?n g?c</h2>
+        <p>Ð?c s?n Tây Nguyên du?c thu ho?ch và ch? bi?n t? cao nguyên r?ng l?n v?i d?t d? bazan, khí h?u mát m? và môi tru?ng t? nhiên phong phú.</p>
+        <ul>
+          <li>Cà phê Robusta, tiêu, và bo sáp ch?t lu?ng cao.</li>
+          <li>M?t ong r?ng, mang khô, và hoa qu? s?y.</li>
+          <li>Nguyên li?u tuoi s?ch t? vùng núi Trung Vi?t.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="ordering" class="section section-ordering">
+      <div class="container">
+        <h2>Hu?ng d?n d?t hàng</h2>
+        <ol>
+          <li>Ch?n s?n ph?m và s? lu?ng b?n mu?n.</li>
+          <li>Ghi chú yêu c?u d?c bi?t n?u có.</li>
+          <li>Liên h? qua email ho?c s? di?n tho?i d? xác nh?n.</li>
+          <li>Nh?n hàng t?n noi ho?c d?n l?y t?i di?m giao.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-contact">
+      <div class="container">
+        <h2>Liên h?</h2>
+        <p>Email: info@dacsantaynguyen.vn</p>
+        <p>Ði?n tho?i: 0900 123 456</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 Ð?c S?n Tây Nguyên</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
