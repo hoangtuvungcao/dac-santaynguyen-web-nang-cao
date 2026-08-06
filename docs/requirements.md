@@ -1,5 +1,6 @@
 # Tài Liệu Yêu Cầu Kỹ Thuật & Phân Tích Kiến Trúc Hệ Thống (Chương 1)
 ## Dự Án: Website Quảng Bá & Giới Thiệu Đặc Sản Tây Nguyên
+> **Người soạn thảo:** Thành viên 1 - Trưởng nhóm & Phân tích hệ thống (Leader & System Analyst)
 
 ---
 
@@ -16,78 +17,76 @@
 
 ---
 
-## 2. Các Tác Nhân Trong Hệ Thống (Actors)
-1. **Khách Truy Cập Vô Danh (Guest Visitor):**
-   - Đọc thông tin giới thiệu Tây Nguyên, xem danh sách sản phẩm, lọc theo loại, tìm kiếm theo từ khóa.
-   - Xem chi tiết sản phẩm (nguồn gốc, đơn giá, đánh giá).
-   - Gửi phản hồi/thông tin qua biểu mẫu liên hệ.
-2. **Khách Hàng Mua Sắm (Shopping Customer - Định hướng tương lai):**
-   - Thêm sản phẩm vào giỏ hàng cá nhân.
-   - Điền thông tin giao hàng và chọn phương thức thanh toán.
-   - Theo dõi trạng thái đơn hàng.
-3. **Quản Trị Viên / Trưởng Nhóm (Admin / Maintainer):**
-   - Quản lý repository GitHub, kiểm duyệt Pull Request.
-   - Cập nhật danh mục dữ liệu `products.json`.
-   - Cấu hình và bảo trì trang web.
+## 2. Các Tác Nhân Trong Hệ Thống (Actors Specification)
 
----
-
-## 3. Phân Công Công Việc Nhóm 3 Người (Role Allocation)
-
-Gộp 5 vai trò ban đầu thành 3 vị trí chính cho nhóm 3 thành viên:
+Dưới sự phân tích của **Thành viên 1**, hệ thống xác định 3 tác nhân chính tương tác với ứng dụng:
 
 ```text
-+-----------------------------------------------------------------------------------+
-|                          BẢNG PHÂN CÔNG NHÓM 3 NGƯỜI                             |
-+----------------------+------------------------------------------------------------+
-| Thành viên           | Vai trò & Trách nhiệm chính                                |
-+----------------------+------------------------------------------------------------+
-| Thành viên 1         | - Trưởng nhóm (Leader) & Phân tích hệ thống (System Analyst)|
-|                      | - Cấu hình Git/GitHub, quản lý workflow & PR.              |
-|                      | - Phân tích yêu cầu, tác nhân & tài liệu `requirements.md`.|
-|                      | - Ghi nhận nhật ký tiến độ nhóm (`work_log.md`).          |
-+----------------------+------------------------------------------------------------+
-| Thành viên 2         | - Phụ trách Frontend (UI/UX Developer)                     |
-|                      | - Thiết kế layout HTML5 (`index.html`) & CSS (`style.css`).|
-|                      | - Xây dựng Responsive & Chế độ Sáng/Tối (Light/Dark mode). |
-|                      | - Viết JS (`main.js`): nạp dữ liệu, lọc, tìm kiếm & modal. |
-+----------------------+------------------------------------------------------------+
-| Thành viên 3         | - Phụ trách Dữ liệu (Data Specialist) & Thư ký (Secretary)  |
-|                      | - Xây dựng file JSON chuẩn `products.json` (10+ sản phẩm). |
-|                      | - Quản lý kho hình ảnh `assets/images/`.                   |
-|                      | - Viết `README.md` & tài liệu định hướng đặt hàng (`roadmap`)|
-+----------------------+------------------------------------------------------------+
++------------------------+-----------------------------------------------------------------+
+| Tác Nhân (Actor)       | Hành Vi & Quyền Hạn Trong Hệ Thống                              |
++------------------------+-----------------------------------------------------------------+
+| 1. Khách Truy Cập      | - Xem thông tin giới thiệu Tây Nguyên & bài viết văn hóa.       |
+|    (Guest Visitor)     | - Xem danh sách 10+ sản phẩm đặc sản.                           |
+|                        | - Lọc sản phẩm theo danh mục và Tìm kiếm theo từ khóa.          |
+|                        | - Xem Quick View modal thông tin nguồn gốc sản phẩm.            |
+|                        | - Gửi phản hồi/thắc mắc qua Form liên hệ.                       |
++------------------------+-----------------------------------------------------------------+
+| 2. Khách Mua Sắm       | - Thêm/xóa sản phẩm trong giỏ hàng tạm thời.                    |
+|    (Shopping Customer) | - Xem tổng giá trị đơn hàng và số lượng món.                   |
+|    *(Định hướng)*      | - Nhập thông tin giao hàng & chọn phương thức thanh toán.       |
++------------------------+-----------------------------------------------------------------+
+| 3. Quản Trị Viên       | - Quản lý Repository Git/GitHub, duyệt Pull Request.           |
+|    (Admin / Leader)    | - Cập nhật dữ liệu JSON `products.json` khi có sản phẩm mới.    |
+|                        | - Bảo trì giao diện và kiểm soát lỗi hệ thống.                  |
++------------------------+-----------------------------------------------------------------+
 ```
 
 ---
 
-## 4. Yêu Cầu Chức Năng (Functional Requirements)
+## 3. Quy Trình Quản Lý Git & Workflow (Thành Viên 1 Thiết Lập)
 
-### 4.1 Giới Thiệu Tây Nguyên (About Section)
-- **FR-01:** Khối banner giới thiệu nét đẹp thiên nhiên, con người và nông sản đại ngàn Tây Nguyên.
-- **FR-02:** Thông tin các tỉnh có đặc sản (Đắk Lắk, Gia Lai, Kon Tum, Lâm Đồng, Đắk Nông).
+1. **Chiến Lược Phân Nhánh (Branching Strategy):**
+   - `main`: Nhánh ổn định chứa phiên bản release nộp bài.
+   - `dev`: Nhánh tích hợp mã nguồn chung của nhóm.
+   - `feature/role1-analyst`: Nhánh làm việc của Thành viên 1 (Docs & Requirement).
+   - `feature/role2-frontend`: Nhánh làm việc của Thành viên 2 (HTML/CSS/JS).
+   - `feature/role3-data`: Nhánh làm việc của Thành viên 3 (JSON & Images).
 
-### 4.2 Danh Sách & Phân Loại Sản Phẩm (Product Catalog)
-- **FR-03:** Nạp dữ liệu bất đồng bộ từ `data/products.json` chứa **ít nhất 10 sản phẩm**.
-- **FR-04:** Phân loại sản phẩm theo danh mục: *Cà Phê & Ca Cao*, *Hạt Dinh Dưỡng*, *Gia Vị Núi Rừng*, *Mật Ong & Dược Liệu*, *Đặc Sản Khô*.
-- **FR-05:** Bộ lọc theo danh mục dạng Button/Tab tương tác trực quan.
-- **FR-06:** Ô tìm kiếm thời gian thực (Live Search) theo tên hoặc vùng xuất xứ.
-
-### 4.3 Thông Tin Nguồn Gốc (Origin Details)
-- **FR-07:** Thẻ sản phẩm và Modal chi tiết thể hiện rõ xuất xứ (Vd: Măng Đen - Kon Tum, Krông Năng - Đắk Lắk, Chư Sê - Gia Lai).
-- **FR-08:** Hiển thị nhãn chứng nhận/đặc trưng (Nhãn: Bán chạy, Mới, Hữu cơ, Truyền thống).
-
-### 4.4 Trang & Khối Liên Hệ (Contact System)
-- **FR-09:** Biểu mẫu nhận thông tin góp ý/đặt hàng sỉ gồm: Họ tên, Email, Số điện thoại, Nội dung tin nhắn.
-- **FR-10:** Hiển thị địa chỉ văn phòng đại diện, hotline hỗ trợ, email liên hệ và bản đồ/thông tin liên lạc.
-
-### 4.5 Định Hướng Chức Năng Đặt Hàng (Order Roadmap)
-- **FR-11:** Tích hợp nút "Thêm vào giỏ" xem trước số lượng trên Header.
-- **FR-12:** Modal hiển thị thông tin lộ trình phát triển chức năng Đặt hàng (Giỏ hàng -> Điền địa chỉ -> Chọn thanh toán -> Xác nhận).
+2. **Quy Trình Kiểm Duyệt Pull Request (Code Review):**
+   - Thành viên hoàn thành nhiệm vụ -> Đẩy code lên nhánh `feature/*` tương ứng.
+   - Tạo Pull Request hướng về nhánh `dev`.
+   - **Thành viên 1 (Leader)** tiến hành review code, kiểm tra syntax và merge vào `dev`.
+   - Sau khi kiểm thử hoàn tất, merge `dev` vào `main` để push lên GitHub.
 
 ---
 
-## 5. Cấu Trúc Dữ Liệu Sản Phẩm Schema (`products.json`)
+## 4. Yêu Cầu Chức Năng Chi Tiết (Functional Requirements)
+
+### 4.1 Phân Đoạn Giới Thiệu (About Section)
+- **FR-01:** Hiển thị Banner Hero hoành tráng truyền tải thông điệp Nông sản hữu cơ Tây Nguyên.
+- **FR-02:** Giới thiệu nét đặc trưng 5 tỉnh Tây Nguyên (Đắk Lắk, Gia Lai, Kon Tum, Lâm Đồng, Đắk Nông).
+
+### 4.2 Quản Lý & Hiển Thị Sản Phẩm (Catalog System)
+- **FR-03:** Nạp động danh sách sản phẩm từ file `data/products.json` (**≥ 10 sản phẩm**).
+- **FR-04:** Phân loại theo 5 danh mục (*Cà Phê & Ca Cao*, *Hạt Dinh Dưỡng*, *Gia Vị Núi Rừng*, *Mật Ong & Dược Liệu*, *Đặc Sản Khô*).
+- **FR-05:** Lọc tức thì khi người dùng bấm vào các nút Tab danh mục.
+- **FR-06:** Ô tìm kiếm Live Search lọc theo Tên sản phẩm, Tên vùng xuất xứ.
+
+### 4.3 Thông Tin Nguồn Gốc & Chi Tiết (Origin & Quick View)
+- **FR-07:** Hiển thị địa danh nguồn gốc (Măng Đen, Krông Pa, Chư Sê, Cầu Đất...) trên từng thẻ sản phẩm.
+- **FR-08:** Mở Modal Quick View xem chi tiết mô tả, đơn vị tính, đơn giá khi người dùng bấm "Xem".
+
+### 4.4 Hệ Thống Liên Hệ (Contact System)
+- **FR-09:** Biểu mẫu gửi thông tin gồm Họ tên, Email, Số điện thoại và Nội dung góp ý.
+- **FR-10:** Thông tin liên hệ trực tiếp (Hotline, Email, Địa chỉ Buôn Ma Thuột).
+
+### 4.5 Định Hướng Chức Năng Đặt Hàng (Ordering Roadmap)
+- **FR-11:** Nút "Thêm vào giỏ" phản hồi Toast notification và tăng bộ đếm Giỏ hàng trên Header.
+- **FR-12:** Xây dựng tài liệu định hướng phát triển quy trình Đặt hàng (`docs/ordering_roadmap.md`).
+
+---
+
+## 5. Schema Định Dạng Dữ Liệu (`data/products.json`)
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
