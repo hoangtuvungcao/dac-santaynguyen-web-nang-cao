@@ -8,7 +8,7 @@
 ---
 
 ## 1. Giới Thiệu Dự Án
-Dự án trang web quảng bá, giới thiệu nông sản và các sản phẩm đặc sản đặc trưng của vùng đất đại ngàn Tây Nguyên (Cà phê Robusta Măng Đen, Hạt Macca Đắk Lắk, Tiêu đen Chư Sê, Mật ong rừng Gia Lai, Bò một nắng Krông Pa...).
+Dự án trang web quảng bá, giới thiệu nông sản và các sản phẩm đặc sản đặc trưng của vùng đất đại ngàn Tây Nguyên. Nội dung chính bao gồm giới thiệu văn hóa, nguồn gốc và catalogue sản phẩm như cà phê, mật ong, tiêu, măng khô, bơ sáp và các đặc sản khác.
 
 Ở **Chương 1**, dự án tập trung hoàn thiện **kiến trúc dự án, tổ chức thư mục, chuẩn hóa dữ liệu JSON, phân công nhiệm vụ nhóm 3 người và lập tài liệu định hướng phát triển chức năng đặt hàng**.
 
@@ -76,10 +76,18 @@ dac-san-tay-nguyen/
 ## 4. Hướng Dẫn Chạy Dự Án
 
 ### Cách 1: Mở Trực Tiếp File HTML
-1. Mở thư mục dự án `dac-san-tay-nguyen`.
-2. Mở tệp `index.html` bằng trình duyệt web (Chrome, Firefox, Edge).
+1. Mở thư mục dự án.
+2. Chạy tệp `index.html` bằng trình duyệt web (Chrome, Firefox, Edge).
 
-### Cách 2: Chạy Server Bằng Node.js / NPM
+### Cách 2: Chạy Server Bằng Python
+1. Mở Terminal tại thư mục dự án.
+2. Chạy lệnh:
+   ```bash
+   python -m http.server 3000
+   ```
+3. Truy cập địa chỉ `http://localhost:3000` trên trình duyệt.
+
+### Cách 3: Chạy Qua Package Script
 1. Mở Terminal tại thư mục dự án.
 2. Chạy lệnh:
    ```bash

@@ -25,7 +25,7 @@
 | (Developer)       | (UI/UX Developer)                      | - css/style.css                    |                        |
 |                   |                                        | - js/main.js                       |                        |
 +-------------------+----------------------------------------+------------------------------------+------------------------+
-| Thành Viên 3      | Phụ Trách Dữ Liệu + Thư Ký Dự Án       | - data/products.json (10+ SP)      | [ ] Hoàn thành 100%    |
+| Thành Viên 3      | Phụ Trách Dữ Liệu + Thư Ký Dự Án       | - data/products.json (10+ SP)      | [x] Hoàn thành 100%    |
 | (Data & Secretary)| (Data Specialist & Secretary)          | - assets/images/                   |                        |
 |                   |                                        | - docs/ordering_roadmap.md         |                        |
 |                   |                                        | - README.md, package.json          |                        |
