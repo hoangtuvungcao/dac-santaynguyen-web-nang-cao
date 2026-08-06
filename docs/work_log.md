@@ -17,15 +17,15 @@
 +-------------------+----------------------------------------+------------------------------------+------------------------+
 | Thành Viên        | Vai Trò Ban Đầu (Gộp)                   | Tệp Tin Đảm Nhận                  | Trạng Thái Tiến Độ     |
 +-------------------+----------------------------------------+------------------------------------+------------------------+
-| Thành Viên 1      | Trưởng Nhóm + Phân Tích Hệ Thống       | - docs/requirements.md             | [x] Hoàn thành 100%    |
+| Thành Viên 1      | Trưởng Nhóm + Phân Tích Hệ Thống       | - docs/requirements.md             | [ ] Hoàn thành 100%    |
 | (Leader)          | (Leader & System Analyst)              | - docs/work_log.md                 |                        |
 |                   |                                        | - Quản lý Repository & PR          |                        |
 +-------------------+----------------------------------------+------------------------------------+------------------------+
-| Thành Viên 2      | Phụ Trách Frontend                     | - index.html                       | [x] Hoàn thành 100%    |
+| Thành Viên 2      | Phụ Trách Frontend                     | - index.html                       | [ ] Hoàn thành 100%    |
 | (Developer)       | (UI/UX Developer)                      | - css/style.css                    |                        |
 |                   |                                        | - js/main.js                       |                        |
 +-------------------+----------------------------------------+------------------------------------+------------------------+
-| Thành Viên 3      | Phụ Trách Dữ Liệu + Thư Ký Dự Án       | - data/products.json (10+ SP)      | [x] Hoàn thành 100%    |
+| Thành Viên 3      | Phụ Trách Dữ Liệu + Thư Ký Dự Án       | - data/products.json (10+ SP)      | [ ] Hoàn thành 100%    |
 | (Data & Secretary)| (Data Specialist & Secretary)          | - assets/images/                   |                        |
 |                   |                                        | - docs/ordering_roadmap.md         |                        |
 |                   |                                        | - README.md, package.json          |                        |
