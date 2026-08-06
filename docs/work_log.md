@@ -1,27 +1,22 @@
 # Nhật Ký Phân Công Công Việc & Tiến Độ Cộng Tác Nhóm 3 Người
 ## Dự Án: Website Quảng Bá Đặc Sản Tây Nguyên (Chương 1)
-> **Quản lý nhật ký:** Thành viên 1 - Trưởng nhóm & Phân tích hệ thống (Leader & System Analyst)
+
+> **Người quản lý nhật ký:** Thành viên 1 - Trưởng nhóm & Phân tích hệ thống *(Leader & System Analyst)*  
+> **Repository:** https://github.com/hoangtuvungcao/dac-santaynguyen-web-nang-cao  
 
 ---
 
-## 1. Thông Tin Nhóm Dự Án
-- **Tên dự án:** Website Đặc Sản Tây Nguyên (`dac-san-tay-nguyen`)
-- **Số lượng thành viên:** 3 người
-- **Repository:** https://github.com/hoangtuvungcao/dac-santaynguyen-web-nang-cao
-
----
-
-## 2. Bảng Phân Công Nhiệm Vụ Chi Tiết (Matrix Assignment)
+## 1. Bảng Phân Công Nhiệm Vụ Chi Tiết (Matrix Assignment)
 
 ```text
 +-------------------+----------------------------------------+------------------------------------+------------------------+
 | Thành Viên        | Vai Trò Ban Đầu (Gộp)                   | Tệp Tin Đảm Nhận                  | Trạng Thái Tiến Độ     |
 +-------------------+----------------------------------------+------------------------------------+------------------------+
-| Thành Viên 1      | Trưởng Nhóm + Phân Tích Hệ Thống       | - docs/requirements.md             | [ ] Hoàn thành 100%    |
+| Thành Viên 1      | Trưởng Nhóm + Phân Tích Hệ Thống       | - docs/requirements.md             | [x] Hoàn thành 100%    |
 | (Leader)          | (Leader & System Analyst)              | - docs/work_log.md                 |                        |
-|                   |                                        | - Quản lý Repository & PR          |                        |
+|                   |                                        | - Quản lý Repository & Duyệt PR    |                        |
 +-------------------+----------------------------------------+------------------------------------+------------------------+
-| Thành Viên 2      | Phụ Trách Frontend                     | - index.html                       | [ ] Hoàn thành 100%    |
+| Thành Viên 2      | Phụ Trách Frontend                     | - index.html                       | [x] Hoàn thành 100%    |
 | (Developer)       | (UI/UX Developer)                      | - css/style.css                    |                        |
 |                   |                                        | - js/main.js                       |                        |
 +-------------------+----------------------------------------+------------------------------------+------------------------+
@@ -34,38 +29,43 @@
 
 ---
 
-## 3. Nhật Ký Tiến Độ Làm Việc Của Thành Viên 1 (Leader Log)
+## 2. Nhật Ký Commit & Lịch Sử Kiểm Duyệt Code (Commit Logs Audit)
+
+Dưới sự giám sát của **Thành viên 1**, lịch sử commit và Pull Request của dự án được ghi nhận minh bạch như sau:
+
+| Commit Hash | Tác giả (Author) | Thông điệp Commit (Commit Message) | Nội dung thực hiện / Ghi chú review |
+| :--- | :--- | :--- | :--- |
+| `f514fc7` | `hoangtuvungcao` | `Fix lỗi encoding UTF-8 hiển thị tiếng Việt cho index.html` | **Thành viên 1:** Khắc phục sự cố mã hóa charset `ISO-8859-1` gây lỗi hiển thị ký tự tiếng Việt có dấu. |
+| `4a447a8` | `lenguyen26` | `Merge pull request #1 from hoangtuvungcao/lenguyen` | **Thành viên 1:** Duyệt và Merge PR #1 tích hợp base website của Thành viên 2 vào nhánh `main`. |
+| `1359e90` | `lenguyen26` | `fix UTF4` | Cập nhật cấu hình tệp tin nhánh `lenguyen`. |
+| `e0c7977` | `lenguyen26` | `fix loi UTF4` | Xử lý lỗi tệp tin nhánh `lenguyen`. |
+| `2b2822d` | `lenguyen26` | `hoan thien base co ban webiste` | **Thành viên 2:** Đẩy mã nguồn HTML5, CSS layout, JavaScript filter và `products.json`. |
+| `5ace755` | `hoangtuvungcao` | `khởi tạo dự án ban đầu` | **Thành viên 1:** Khởi tạo cấu trúc dự án, tạo nhánh `leader`, tạo tài liệu `requirements.md` & `work_log.md`. |
+| `aa65a5d` | `hoangtuvungcao` | `Cập nhật tài liệu phân tích hệ thống và nhật ký làm việc cho Thành viên 1` | **Thành viên 1:** Cập nhật nội dung chi tiết vai trò Leader & Analyst. |
+
+---
+
+## 3. Nhật Ký Tiến Độ Chi Tiết Của Thành Viên 1 (Leader Log)
 
 ### Ngày 06/08/2026:
-- **08:00 - 09:30:** Khởi tạo Repository trên GitHub `dac-santaynguyen-web-nang-cao`, cấu hình file `.gitignore`, phân quyền nhóm.
-- **09:30 - 11:30:** Khảo sát yêu cầu bài tập Chương 1, họp nhóm 3 người gộp 5 vai trò ban đầu thành 3 vị trí phù hợp với năng lực từng bạn.
-- **13:00 - 15:30:** Viết tài liệu phân tích hệ thống `docs/requirements.md`:
-  - Mô tả chi tiết 3 Tác nhân hệ thống.
-  - Xây dựng 12 Yêu cầu chức năng (FR-01 đến FR-12).
-  - Chuẩn hóa JSON Schema cho dữ liệu sản phẩm.
-- **15:30 - 17:00:** Thiết lập chiến lược chia nhánh Git (`main`, `dev`, `feature/*`) và định rõ quy trình kiểm duyệt Pull Request.
-- **17:00 - 18:30:** Tổng hợp nhật ký làm việc `docs/work_log.md` và hỗ trợ kiểm tra tính đồng bộ dự án trước khi nộp bài.
+- **08:00 - 09:30:** Khởi tạo Repository trên GitHub `dac-santaynguyen-web-nang-cao`, cấu hình `.gitignore`, tạo các nhánh làm việc (`main`, `dev`, `leader`).
+- **09:30 - 11:30:** Họp phân công công việc nhóm 3 người, gộp 5 vai trò ban đầu thành 3 vị trí phù hợp với năng lực thành viên.
+- **13:00 - 15:30:** Soạn thảo tài liệu Phân tích hệ thống [docs/requirements.md](file:///home/vantrong/123456789/docs/requirements.md):
+  - Xác định 3 Tác nhân hệ thống.
+  - Xây dựng 11 Yêu cầu chức năng (FR-01 đến FR-11) và Yêu cầu phi chức năng.
+  - Chuẩn hóa JSON Schema cho `data/products.json`.
+- **15:30 - 17:30:** Đánh giá & Kiểm duyệt Pull Request #1 từ nhánh `lenguyen`:
+  - Kiểm tra giao diện HTML, CSS layout và script xử lý tìm kiếm/lọc sản phẩm.
+  - Phát hiện và sửa lỗi mã hóa charset `ISO-8859-1` trên `index.html`, chuyển đổi tệp về chuẩn **UTF-8 (no BOM)**.
+- **17:30 - 19:00:** Hoàn thiện nhật ký làm việc [docs/work_log.md](file:///home/vantrong/123456789/docs/work_log.md) và đồng bộ tài liệu tổng quan [README.md](file:///home/vantrong/123456789/README.md).
 
 ---
 
-## 4. Nhật Ký Cộng Tác Nhóm (Team Contributions Log)
+## 4. Bảng Kiểm Duyệt Hoàn Thành Nhiệm Vụ Chương 1 (Leader Checklist)
 
-- **Thành viên 2 (Frontend):**
-  - Hoàn thành giao diện ngữ nghĩa HTML5 `index.html`.
-  - Thiết kế stylesheet `css/style.css` chuẩn màu đất đỏ bazan, hỗ trợ responsive & Dark mode.
-  - Viết `js/main.js` nạp dữ liệu Fetch API, bộ lọc danh mục và live search.
-- **Thành viên 3 (Dữ liệu & Thư ký):**
-  - Chuẩn hóa file `data/products.json` chứa 10 sản phẩm đặc sản Tây Nguyên.
-  - Thu thập hình ảnh sản phẩm vào `assets/images/`.
-  - Lập tài liệu định hướng đặt hàng `docs/ordering_roadmap.md` và tài liệu tổng quan `README.md`.
-
----
-
-## 5. Bảng Kiểm Duyệt Hoàn Thành Bài Tập Chương 1 (Leader Checklist)
-
-- [x] **Quản lý Repository:** Git repo đã khởi tạo, kết nối remote và push mã nguồn thành công.
-- [x] **Tài liệu Phân tích:** File `docs/requirements.md` mô tả đầy đủ tác nhân, yêu cầu & kiến trúc.
-- [x] **Cấu trúc Thư mục:** Đã phân chia chuẩn các thư mục `assets/`, `css/`, `js/`, `data/`, `docs/`.
-- [x] **Dữ liệu JSON:** File `data/products.json` chứa 10 sản phẩm đặc sản có thông tin nguồn gốc.
-- [x] **Giao diện Web:** Hiển thị 6 phần yêu cầu (Giới thiệu, 10 SP, Phân loại, Nguồn gốc, Liên hệ, Định hướng đặt hàng).
-- [x] **Nhật ký & README:** File `docs/work_log.md` và `README.md` đã ghi nhận phân công chi tiết cho 3 người.
+- [x] **Repository & Branching:** Đã khởi tạo GitHub repo, thiết lập các nhánh `main`, `dev`, `leader` và duyệt PR.
+- [x] **Tài liệu Phân tích hệ thống:** File `docs/requirements.md` mô tả đầy đủ tác nhân, quy trình Git, yêu cầu & schema dữ liệu.
+- [x] **Cấu trúc Dự án:** Đã phân chia chuẩn các thư mục `assets/images/`, `css/`, `js/`, `data/`, `docs/`.
+- [x] **Dữ liệu JSON:** File `data/products.json` chứa các sản phẩm đặc sản Tây Nguyên hiển thị thông tin giá & nguồn gốc.
+- [x] **Chuẩn UTF-8:** Đã khắc phục hoàn toàn lỗi mã hóa tiếng Việt có dấu trên `index.html`.
+- [x] **Tài liệu Hướng dẫn & Nhật ký:** Đã hoàn thiện `docs/work_log.md` và `README.md` sẵn sàng nộp bài.
